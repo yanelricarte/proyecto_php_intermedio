@@ -2,69 +2,92 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  }
-  body {
+}
+
+body {
   font-family: "Nunito Sans", sans-serif;
   background-color: rgb(218, 216, 216);
-  }
-  .header {
+}
+
+.header {
   /* background-image: linear-gradient(180deg ,rgba(16,20,27,.8) 50%,rgba(16,20,27,0)); */
   background-color: #242633;
   color: white;
-  }
-  .titulo {
+}
+
+.titulo {
   padding: 1rem;
   text-align: center;
-  }
-  .menu_principal {
+}
+
+.menu_principal {
   background-color: #10141b;
   font-family: "Poppins", sans-serif;
   padding: 2rem;
   list-style: none;
   display: flex;
   justify-content: end;
-  }
-  .menu_principal li {
+}
+
+.menu_principal li {
   font-weight: 500;
   text-transform: uppercase;
-  }
-  .menu_principal a {
+}
+
+.menu_principal a {
   color: white;
   text-decoration: none;
   cursor: pointer;
   padding: 10px 13px;
   border-bottom: 1px solid transparent;
-  }
+}
 
-  /* Inicio */
-  .contenedor_cargar {
+/* Inicio */
+.contenedor_cargar {
   text-align: center;
   padding: 2rem;
-  }
+}
 
-  .formulario {
+.formulario {
   width: 60%;
   padding: 2rem;
   border-radius: 10px;
   margin: auto;
   background-color: rgb(134, 132, 132);
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  }
+  gap: 0.6rem;
+  font-size: 0.9rem;
+}
 
-  .formulario input[type="text"], [type="password"], [type="number"], input[type="select"] {
+.label-oculto {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+
+}
+
+.formulario input[type="text"],
+[type="password"],
+[type="number"] {
   width: 80%;
   height: 2rem;
   padding: 3px 10px;
   border: 1px solid #f6f6f6;
   border-radius: 3px;
   background-color: #f6f6f6;
-  margin: 8px 0;
   display: inline-block;
-  }
+}
 
-  .formulario input[type="submit"] {
+.formulario input[type="submit"] {
   width: 50%;
   align-self: flex-end;
   margin-right: 10%;
@@ -74,16 +97,16 @@
   border-radius: 5px;
   color: #fff;
   background-color: #000;
-  }
+}
 
-  .formulario input[type="submit"]:hover {
+.formulario input[type="submit"]:hover {
   cursor: pointer;
   background-color: rgb(107, 105, 105);
   color: black;
   font-weight: 600;
-  }
+}
 
-  .formulario textarea {
+.formulario textarea {
   width: 80%;
   height: 100px;
   border: 1px solid #f6f6f6;
@@ -92,22 +115,27 @@
   margin: 8px 0;
   resize: none;
   display: block;
-  }
-  .label{
-    text-align: left;
-  }
+}
+
+.box_select,
+select,
+label {
+  /**/
+}
+
 /* VER PERSONAJES */
-  .contenedor_personajes {
+.contenedor_personajes {
   display: flex;
   flex-wrap: wrap;
-  }
+}
 
-  .caja_personajes {
+.caja_personajes {
   background-color: palevioletred;
   padding: 2rem;
   margin: 1rem;
   width: 30%;
-  }
-  .caja_personajes img {
+}
+
+.caja_personajes img {
   width: 80%;
-  }
+}
