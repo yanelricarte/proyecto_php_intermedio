@@ -24,13 +24,18 @@ if (isset($_SESSION['admin'])) {
     <form action="cargar_personaje.php" method="post" class="formulario" enctype="multipart/form-data">
       <input type="text" name="nombre" placeholder="Nombre">
       <input type="text" name="apellido" placeholder="Apellido">
-      <input type="file" name="imagen" placeholder="Imagen">
+      <div class="box_select">
+        <input type="file" name="imagen" placeholder="Imagen">
+      </div>
       <textarea name="descripcion" id="" cols="30" rows="10"></textarea>
-      <label for="estado"> Estado: </label>
-      <select name="estado" id="">
-        <option value="proceso"> en proceso</option>
-        <option value="finalizado"> finalizado</option>
-      </select>
+      <div class="box_select">
+        <label for="estado"> Estado: </label>
+        <select name="estado" id="">
+          <option value="proceso"> en proceso</option>
+          <option value="finalizado"> finalizado</option>
+        </select>
+      </div>
+
       <img src="captcha.php" alt="captcha">
       <input type="text" name="captcha" placeholder="Ingresa captcha">
       <input type="submit" value="Cargar Personaje">
