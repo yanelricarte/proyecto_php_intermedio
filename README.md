@@ -34,10 +34,17 @@ proyecto_php_intermedio/
 │   └── imagenes/              ←   Imágenes de los personajes
 │
 ├── unidad_3/                  ← Unidad 3: Manejo de fechas
-│   └── fecha/
-│       └── index.php          ←   date(), time(), DateTime, strtotime
+│   ├── fecha/
+│   │   ├── index.php          ←   date(), time(), DateTime, strtotime
+│   │   ├── ejemplo1.php       ←   date() básico
+│   │   └── ejemplo2.php       ←   time(), strtotime(), getdate()
 │
-└── unidad_4/                  ← 🔜 Unidad 4: Manejo de archivos (próximamente)
+├── unidad_4/                  ← Unidad 4: Manejo de archivos
+│   ├── README.md              ←   Descripción de los ejemplos
+│   ├── crear_archivo.php      ←   fopen() modo "x"
+│   ├── formulario_comentarios.php ← Formulario de comentarios
+│   ├── guardar_comentario.php ←   Guardar comentarios con fputs()
+│   └── leer_comentarios.php   ←   Leer comentarios con fread()
 ```
 
 ---
@@ -105,6 +112,16 @@ mysql -u root -p < base_de_datos.sql
 └──────────────────────────────────────┘
 ```
 
+### Unidad 4 — Manejo de Archivos (`unidad_4/`)
+
+**Temas cubiertos:**
+- ✅ `fopen()` — Apertura de archivos en modo `"a"` (append) y `"x"` (crear exclusivo)
+- ✅ `fputs()` — Escritura en archivos
+- ✅ `fread()` + `filesize()` — Lectura completa de archivos
+- ✅ `fclose()` — Cierre de archivos
+- ✅ `file_exists()` — Verificar existencia
+- ✅ `htmlspecialchars()` — Sanitización de entrada antes de guardar
+
 ### Unidad 3 — Fecha y Hora (`unidad_3/fecha/`)
 
 **Temas cubiertos:**
@@ -132,7 +149,7 @@ Este repositorio sirve como **material de apoyo** para el curso de PHP Intermedi
 
 | Unidad | Tema | Estado |
 |--------|------|--------|
-| 4 | Manejo de archivos (fopen, fwrite, fread) | 🔜 Próximamente |
+| 4 | Manejo de archivos (fopen, fwrite, fread) | ✅ Completado |
 | 5 | Manejo de imágenes (subir, renombrar, redimensionar) | ⏳ Pendiente |
 
 ---
