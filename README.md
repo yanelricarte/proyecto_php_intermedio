@@ -9,7 +9,7 @@
 
 ---
 
-## Estructura del repositorio
+## 📁 Estructura del repositorio
 
 ```
 proyecto_php_intermedio/
@@ -49,7 +49,7 @@ proyecto_php_intermedio/
 
 ---
 
-## Como usar este proyecto
+## 🚀 Como usar este proyecto
 
 ### 1. Requisitos
 
@@ -78,7 +78,7 @@ mysql -u root -p < base_de_datos.sql
 
 ---
 
-## Contenido por unidad
+## 📚 Contenido por unidad
 
 ### Unidad 1 y 2 — CRUD, Sesiones y Captcha (`unidad_1_2/`)
 
@@ -154,6 +154,6 @@ Este repositorio sirve como **material de apoyo** para el curso de PHP Intermedi
 
 ---
 
-## Contacto
+## 📬 Contacto
 
 **Prof. Yanel Ricarte** — [GitHub](https://github.com/yanelricarte)
