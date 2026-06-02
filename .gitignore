@@ -1,0 +1,23 @@
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Archivos de configuración del IDE
+.vscode/
+.idea/
+*.sublime-*
+*.swp
+*.swo
+
+# Archivos de prueba / temporales
+*.tmp
+*.log
+ejemplo1.txt
+ejemplo3.txt
+
+# Cliente / node_modules (si se usara)
+node_modules/
+
+# No subir zip
+*.zip
