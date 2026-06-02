@@ -21,3 +21,7 @@ node_modules/
 
 # No subir zip
 *.zip
+
+# Configuración de Claude (no incluir en repo público)
+.claude/
+.claude/*
