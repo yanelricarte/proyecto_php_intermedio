@@ -1,4 +1,4 @@
-# 🧙 PHP Intermedio — Hogwarts: Sistema de Administración
+# PHP Intermedio — Hogwarts: Sistema de Administración
 
 [![PHP](https://img.shields.io/badge/PHP-8.x-777BB4?logo=php&logoColor=white)](https://php.net)
 [![MySQL](https://img.shields.io/badge/MySQL-8.x-4479A1?logo=mysql&logoColor=white)](https://mysql.com)
@@ -9,7 +9,7 @@
 
 ---
 
-## 📂 Estructura del repositorio
+## Estructura del repositorio
 
 ```
 proyecto_php_intermedio/
@@ -49,7 +49,7 @@ proyecto_php_intermedio/
 
 ---
 
-## 🚀 Cómo usar este proyecto
+## Como usar este proyecto
 
 ### 1. Requisitos
 
@@ -57,7 +57,7 @@ proyecto_php_intermedio/
 - **MySQL 8.x** o MariaDB
 - **Servidor web** (Apache / XAMPP / laragon / etc.)
 
-### 2. Instalación
+### 2. Instalacion
 
 ```bash
 # 1. Clonar el repositorio dentro del htdocs de tu servidor
@@ -78,86 +78,82 @@ mysql -u root -p < base_de_datos.sql
 
 ---
 
-## 📚 Contenido por unidad
+## Contenido por unidad
 
 ### Unidad 1 y 2 — CRUD, Sesiones y Captcha (`unidad_1_2/`)
 
 **Temas cubiertos:**
-- ✅ **PHP + MySQL** — Conexión con `mysqli_connect()`
-- ✅ **CRUD** — Crear, Leer, Actualizar y Eliminar personajes
-- ✅ **Sesiones** — `session_start()`, `$_SESSION`, login/logout
-- ✅ **Subida de archivos** — `$_FILES`, `move_uploaded_file()`, validación de tipo y tamaño
-- ✅ **Captcha** — Generación de imágenes con `GD library`
-- ✅ **Include/Require** — Reutilización de header y footer
-- ✅ **Estilos** — CSS responsivo con temática de Harry Potter
+- PHP + MySQL — Conexion con `mysqli_connect()`
+- CRUD — Crear, Leer, Actualizar y Eliminar personajes
+- Sesiones — `session_start()`, `$_SESSION`, login/logout
+- Subida de archivos — `$_FILES`, `move_uploaded_file()`, validacion de tipo y tamano
+- Captcha — Generacion de imagenes con `GD library`
+- Include/Require — Reutilizacion de header y footer
+- Estilos — CSS responsivo con tematica de Harry Potter
 
 **Estructura del formulario de carga:**
 ```
 ┌──────────────────────────────────────┐
 │         Cargar personaje             │
 │                                      │
-│  [Nombre]   [Apellido]   [📁 Imagen] │
+│  [Nombre]   [Apellido]   [ Imagen]   │
 │                                      │
-│  Estado: [▼ Procesando]              │
+│  Estado: [ Procesando]               │
 │                                      │
 │  ┌──────────────────────────────────┐│
-│  │  Descripción (textarea)          ││
+│  │  Descripcion (textarea)          ││
 │  └──────────────────────────────────┘│
 │                                      │
 │  ┌───────┐                           │
-│  │ CAPTCHA│  [código...]             │
+│  │ CAPTCHA│  [codigo...]             │
 │  └───────┘                           │
 │                                      │
 │  [ Cargar personaje ]                │
 └──────────────────────────────────────┘
 ```
 
-### Unidad 4 — Manejo de Archivos (`unidad_4/`)
-
-**Temas cubiertos:**
-- ✅ `fopen()` — Apertura de archivos en modo `"a"` (append) y `"x"` (crear exclusivo)
-- ✅ `fputs()` — Escritura en archivos
-- ✅ `fread()` + `filesize()` — Lectura completa de archivos
-- ✅ `fclose()` — Cierre de archivos
-- ✅ `file_exists()` — Verificar existencia
-- ✅ `htmlspecialchars()` — Sanitización de entrada antes de guardar
-
 ### Unidad 3 — Fecha y Hora (`unidad_3/fecha/`)
 
 **Temas cubiertos:**
-- ✅ `date()` — Formateo de fechas
-- ✅ `time()` — Timestamp UNIX
-- ✅ `getdate()` — Array con componentes de fecha
-- ✅ `strtotime()` — Manipulación de fechas (+1 week, -1 day, etc.)
-- ✅ `DateTime` — Clase para operaciones con fechas
-- ✅ `diff()` — Diferencia entre dos fechas
-- ✅ `createFromFormat()` — Validación de fechas
+- `date()` — Formateo de fechas
+- `time()` — Timestamp UNIX
+- `getdate()` — Array con componentes de fecha
+- `strtotime()` — Manipulacion de fechas (+1 week, -1 day, etc.)
+- `DateTime` — Clase para operaciones con fechas
+- `diff()` — Diferencia entre dos fechas
+- `createFromFormat()` — Validacion de fechas
+
+### Unidad 4 — Manejo de Archivos (`unidad_4/`)
+
+**Temas cubiertos:**
+- `fopen()` — Apertura de archivos en modo `"a"` (append) y `"x"` (crear exclusivo)
+- `fputs()` — Escritura en archivos
+- `fread()` + `filesize()` — Lectura completa de archivos
+- `fclose()` — Cierre de archivos
+- `file_exists()` — Verificar existencia
+- `htmlspecialchars()` — Sanitizacion de entrada antes de guardar
 
 ---
 
-## 🎯 Objetivos del proyecto
+## Objetivos del proyecto
 
-Este repositorio sirve como **material de apoyo** para el curso de PHP Intermedio. Cada unidad se publica después de ser dictada en clase, para que los estudiantes tengan:
+Este repositorio sirve como **material de apoyo** para el curso de PHP Intermedio. Cada unidad se publica despues de ser dictada en clase, para que los estudiantes tengan:
 
-- 📖 **Código de referencia** completo y comentado
-- 🔍 **Ejemplos prácticos** que pueden probar y modificar
-- 📝 **Base para el trabajo práctico** final del curso
+- **Codigo de referencia** completo y comentado
+- **Ejemplos practicos** que pueden probar y modificar
+- **Base para el trabajo practico** final del curso
 
 ---
 
-## 🔜 Próximas unidades
+## Proximas unidades
 
 | Unidad | Tema | Estado |
 |--------|------|--------|
-| 4 | Manejo de archivos (fopen, fwrite, fread) | ✅ Completado |
-| 5 | Manejo de imágenes (subir, renombrar, redimensionar) | ⏳ Pendiente |
+| 4 | Manejo de archivos (fopen, fwrite, fread) | Completado |
+| 5 | Manejo de imagenes (subir, renombrar, redimensionar) | Pendiente |
 
 ---
 
-## 📬 Contacto
+## Contacto
 
 **Prof. Yanel Ricarte** — [GitHub](https://github.com/yanelricarte)
-
----
-
-> 🧙 *"La magia está en el código."* — Con ❤️ para la comisión de PHP Intermedio
