@@ -13,10 +13,11 @@ if (isset($_SESSION['admin'])) {
 
         ?>
             <div class="caja_personajes">
-                <h2><?php echo $mostrar_datos['nombre'] . " " . $mostrar_datos['apellido']; ?></h2>    
-                <img src="imagenes/<?php echo $mostrar_datos['imagen'] ?>" alt="">   
-                <h3>Estado: <?php echo $mostrar_datos['estado'] ?></h3>
-                <p><?php echo $mostrar_datos['descripcion'] ?></p>
+                <?php // htmlspecialchars() escapa la salida para evitar XSS almacenado. ?>
+                <h2><?php echo htmlspecialchars($mostrar_datos['nombre'] . " " . $mostrar_datos['apellido']); ?></h2>
+                <img src="imagenes/<?php echo htmlspecialchars($mostrar_datos['imagen']); ?>" alt="">
+                <h3>Estado: <?php echo htmlspecialchars($mostrar_datos['estado']); ?></h3>
+                <p><?php echo htmlspecialchars($mostrar_datos['descripcion']); ?></p>
             
                 <p> <a href="eliminar.php?id=<?php echo $mostrar_datos['id_per']; ?>">Eliminar</a></p>
                 <p> <a href="editar.php?id=<?php echo $mostrar_datos['id_per']; ?>">Finalizar Pedido</a></p>

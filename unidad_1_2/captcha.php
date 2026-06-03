@@ -1,6 +1,6 @@
 <?php
 session_start();
-header("Content-type: image/jpege");
+header("Content-type: image/jpeg");
 $imagen_captcha = imagecreate(70, 30);
 $fondo = imagecolorallocate($imagen_captcha, 239, 192, 240);
 $texto = imagecolorallocate($imagen_captcha, 82, 4, 34);

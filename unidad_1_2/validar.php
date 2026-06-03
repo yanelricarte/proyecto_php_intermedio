@@ -1,26 +1,24 @@
-<?php 
+<?php
 session_start();
-
-$usuario = $_POST['usuario'];
-$clave = $_POST['clave'];
 
 include('conexion.php');
 
-$consulta = mysqli_query($conexion_db,"SELECT * FROM administradores WHERE dni = $usuario AND clave = '$clave' ");
+$usuario = $_POST['usuario'] ?? '';
+$clave   = $_POST['clave'] ?? '';
 
-if (mysqli_num_rows($consulta) == 0){
-    header('Location: index.php?error');
+// Sentencia preparada: el dato del usuario nunca se concatena al SQL,
+// así se evita la inyección SQL (ej. ' OR '1'='1).
+$consulta = mysqli_prepare($conexion_db, "SELECT clave FROM administradores WHERE dni = ?");
+mysqli_stmt_bind_param($consulta, "i", $usuario);
+mysqli_stmt_execute($consulta);
+$resultado = mysqli_stmt_get_result($consulta);
+$admin = mysqli_fetch_assoc($resultado);
 
-} else{
-    $_SESSION['admin'] = $_POST['usuario'];
+// password_verify() compara la clave ingresada contra el hash guardado.
+if ($admin && password_verify($clave, $admin['clave'])) {
+    $_SESSION['admin'] = $usuario;
     header('Location:carga.php');
+} else {
+    header('Location: index.php?error');
 }
-
-
-
-// if ($_POST['usuario']=='admin' && $_POST['clave']== 'admin1234'){
-//     $_SESSION['admin'] = $_POST['usuario'];
-//     header('Location:carga.php');
-// } else{
-//     header('Location: index.php?error');
-// }
+exit;

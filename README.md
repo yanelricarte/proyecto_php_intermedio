@@ -76,6 +76,8 @@ mysql -u root -p < base_de_datos.sql
 |---------------|------------|
 | `12345678`    | `admin1234` |
 
+> **Nota de seguridad:** la contraseña se guarda **hasheada** (`password_hash`) en la base, no en texto plano. El login la valida con `password_verify()`. Todas las consultas usan **sentencias preparadas** (anti SQL injection), las acciones de escritura exigen sesión de admin y la salida se escapa con `htmlspecialchars()` (anti XSS).
+
 ---
 
 ## 📚 Contenido por unidad
